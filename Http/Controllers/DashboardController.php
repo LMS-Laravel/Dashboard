@@ -16,14 +16,18 @@ class DashboardController extends Controller {
 		$this->dashboard = $dashboard;
 	}
 
-	public function frontend()
+	public function frontend(PrincipalMenu $principal)
 	{
-		$principal = new PrincipalMenu();
 		return \Theme::view('dashboard.frontend', compact('principal'));
 	}
 
-	public function backend()
+	public function backend(PrincipalMenu $principal)
 	{
 		return \Theme::view('dashboard.backend', compact('principal'));
+	}
+
+	public function admin(PrincipalMenu $principal)
+	{
+		return \Theme::view('dashboard.admin', compact('principal'));
 	}
 }
