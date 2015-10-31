@@ -1,5 +1,6 @@
 <?php namespace Modules\Dashboard\Http\Controllers;
 
+use Modules\Course\Repositories\CourseRepository;
 use Modules\Dashboard\Repositories\DashboardRepository;
 use Pingpong\Modules\Routing\Controller;
 use Modules\Dashboard\Menus\PrincipalMenu;
@@ -21,9 +22,10 @@ class DashboardController extends Controller {
 		return \Theme::view('dashboard.frontend', compact('principal'));
 	}
 
-	public function backend(PrincipalMenu $principal)
+	public function learning(PrincipalMenu $principal, CourseRepository $course)
 	{
-		return \Theme::view('dashboard.backend', compact('principal'));
+		$courses = $course->with('modules')->all();
+		return \Theme::view('dashboard.learning', compact('principal', 'courses'));
 	}
 
 	public function admin(PrincipalMenu $principal)

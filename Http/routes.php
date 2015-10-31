@@ -12,5 +12,5 @@ Route::group(['prefix'=>'admin','namespace' => 'Modules\Dashboard\Http\Controlle
 
 Route::group(['prefix'=>'learning','namespace' => 'Modules\Dashboard\Http\Controllers'], function()
 {
-	Route::get('/', ['as' => 'dashboard.learning', 'uses' => 'DashboardController@backend']);
+	Route::get('/', ['as' => 'dashboard.learning', 'uses' => 'DashboardController@learning']);
 });
