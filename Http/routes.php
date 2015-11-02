@@ -10,7 +10,7 @@ Route::group(['prefix'=>'admin','namespace' => 'Modules\Dashboard\Http\Controlle
 	Route::get('/', ['as' => 'dashboard.admin', 'uses' => 'DashboardController@backend']);
 });
 
-Route::group(['prefix'=>'learning','namespace' => 'Modules\Dashboard\Http\Controllers'], function()
+Route::group(['prefix'=>'learning','namespace' => 'Modules\Dashboard\Http\Controllers', 'middleware' => 'auth'], function()
 {
 	Route::get('/', ['as' => 'dashboard.learning', 'uses' => 'DashboardController@learning']);
 });
