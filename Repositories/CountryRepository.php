@@ -1,7 +1,6 @@
 <?php
 
-namespace Modules\Dashboard\Repositories;
-
+namespace modules\Dashboard\Repositories;
 
 use Modules\Dashboard\Entities\Country;
 use Prettus\Repository\Eloquent\BaseRepository;
@@ -12,5 +11,4 @@ class CountryRepository extends BaseRepository
     {
         return Country::class;
     }
-
 }

@@ -1,5 +1,6 @@
-<?php namespace Modules\Dashboard\Repositories;
+<?php
 
+namespace modules\Dashboard\Repositories;
 
 use Modules\Dashboard\Entities\Dashboard;
 use Prettus\Repository\Eloquent\BaseRepository;
@@ -7,7 +8,7 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class DashboardRepository extends BaseRepository
 {
     /**
-     * Specify Model class name
+     * Specify Model class name.
      *
      * @return string
      */
@@ -15,6 +16,4 @@ class DashboardRepository extends BaseRepository
     {
         return Dashboard::class;
     }
-
-
 }
