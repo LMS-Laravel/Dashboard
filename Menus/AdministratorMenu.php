@@ -1,8 +1,8 @@
 <?php
 
-namespace modules\Dashboard\Menus;
+namespace Modules\Dashboard\Menus;
 
-use app\BaseMenu;
+use App\BaseMenu;
 
 class AdministratorMenu extends BaseMenu
 {

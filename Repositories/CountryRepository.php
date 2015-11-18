@@ -2,7 +2,6 @@
 
 namespace Modules\Dashboard\Repositories;
 
-
 use Modules\Dashboard\Entities\Country;
 use Prettus\Repository\Eloquent\BaseRepository;
 
