@@ -1,86 +1,95 @@
-<?php
-
-namespace modules\Dashboard\Providers;
+<?php namespace Modules\Dashboard\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class DashboardServiceProvider extends ServiceProvider
-{
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
+class DashboardServiceProvider extends ServiceProvider {
 
-    /**
-     * Boot the application events.
-     */
-    public function boot()
-    {
-        $this->registerConfig();
-        $this->registerTranslations();
-        $this->registerViews();
-    }
+	/**
+	 * Indicates if loading of the provider is deferred.
+	 *
+	 * @var bool
+	 */
+	protected $defer = false;
 
-    /**
-     * Register the service provider.
-     */
-    public function register()
-    {
-        //
-    }
+	/**
+	 * Boot the application events.
+	 * 
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->registerConfig();
+		$this->registerTranslations();
+		$this->registerViews();
+	}
 
-    /**
-     * Register config.
-     */
-    protected function registerConfig()
-    {
-        $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('dashboard.php'),
-        ]);
-        $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'dashboard'
-        );
-    }
+	/**
+	 * Register the service provider.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{		
+		//
+	}
 
-    /**
-     * Register views.
-     */
-    public function registerViews()
-    {
-        $viewPath = base_path('views/modules/dashboard');
+	/**
+	 * Register config.
+	 * 
+	 * @return void
+	 */
+	protected function registerConfig()
+	{
+		$this->publishes([
+		    __DIR__.'/../Config/config.php' => config_path('dashboard.php'),
+		]);
+		$this->mergeConfigFrom(
+		    __DIR__.'/../Config/config.php', 'dashboard'
+		);
+	}
 
-        $sourcePath = __DIR__.'/../Resources/views';
+	/**
+	 * Register views.
+	 * 
+	 * @return void
+	 */
+	public function registerViews()
+	{
+		$viewPath = base_path('views/modules/dashboard');
 
-        $this->publishes([
-            $sourcePath => $viewPath,
-        ]);
+		$sourcePath = __DIR__.'/../Resources/views';
 
-        $this->loadViewsFrom([$viewPath, $sourcePath], 'dashboard');
-    }
+		$this->publishes([
+			$sourcePath => $viewPath
+		]);
 
-    /**
-     * Register translations.
-     */
-    public function registerTranslations()
-    {
-        $langPath = base_path('resources/lang/modules/dashboard');
+		$this->loadViewsFrom([$viewPath, $sourcePath], 'dashboard');
+	}
 
-        if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'dashboard');
-        } else {
-            $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'dashboard');
-        }
-    }
+	/**
+	 * Register translations.
+	 * 
+	 * @return void
+	 */
+	public function registerTranslations()
+	{
+		$langPath = base_path('resources/lang/modules/dashboard');
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return array();
-    }
+		if (is_dir($langPath)) {
+			$this->loadTranslationsFrom($langPath, 'dashboard');
+		} else {
+			$this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'dashboard');
+		}
+	}
+
+	/**
+	 * Get the services provided by the provider.
+	 *
+	 * @return array
+	 */
+	public function provides()
+	{
+		return array();
+	}
+
 }

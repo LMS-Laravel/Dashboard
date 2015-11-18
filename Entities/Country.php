@@ -1,10 +1,9 @@
-<?php
-
-namespace modules\Dashboard\Entities;
-
+<?php namespace Modules\Dashboard\Entities;
+   
 use Illuminate\Database\Eloquent\Model;
 
-class Country extends Model
-{
+class Country extends Model {
+
     protected $fillable = [];
+
 }

@@ -1,11 +1,11 @@
-<?php
+<?php  namespace Modules\Dashboard\Menus;
 
-namespace modules\Dashboard\Menus;
 
 use App\BaseMenu;
 
 class PrincipalMenu extends BaseMenu
 {
+
     public function __construct()
     {
         $this->class    = 'nav navbar-nav navbar-right nav-effect uppercase';
@@ -13,60 +13,63 @@ class PrincipalMenu extends BaseMenu
     }
 
     /**
-     * Specify Items Menu.
-     *
+     * Specify Items Menu
      * @return string
      */
     public function items()
     {
         return [
-            'home' => [
+            'home'  => [
                 'title' => trans('dashboard::menus.principal.home'),
-                'url' => '#home',
-                'data-scroll' => true,
+                'url'   => '#home',
+                'data-scroll' => true
             ],
-            'about' => [
+            'about'  => [
                 'title' => trans('dashboard::menus.principal.about'),
-                'url' => '#about',
-                'data-scroll' => true,
+                'url'   => '#about',
+                'data-scroll' => true
             ],
-            'team' => [
+            'team'  => [
                 'title' => trans('dashboard::menus.principal.team'),
-                'url' => '#team',
-                'data-scroll' => true,
+                'url'   => '#team',
+                'data-scroll' => true
             ],
-            'services' => [
+            'services'  => [
                 'title' => trans('dashboard::menus.principal.services'),
-                'url' => '#services',
-                'data-scroll' => true,
+                'url'   => '#services',
+                'data-scroll' => true
             ],
-            'platform' => [
+            'platform'  => [
                 'title' => trans('dashboard::menus.principal.platform'),
-                'url' => route('auth.loginGet'),
-                'data-scroll' => true,
+                'url'   => route('auth.loginGet'),
+                'data-scroll' => true
             ],
-            'contact' => [
+            'contact'  => [
                 'title' => trans('dashboard::menus.principal.contact'),
-                'url' => '#contact',
-                'data-scroll' => true,
+                'url'   => '#contact',
+                'data-scroll' => true
             ],
-            'facebook' => [
-                'url' => '#',
-                'icon' => 'fa fa-facebook',
+            'facebook'  => [
+                'url'   => '#',
+                'icon'  => 'fa fa-facebook',
             ],
-            'twitter' => [
-                'url' => '#',
-                'icon' => 'fa fa-twitter',
+            'twitter'  => [
+                'url'   => '#',
+                'icon'  => 'fa fa-twitter',
             ],
-            'google' => [
-                'url' => '#',
-                'icon' => 'fa fa-google',
+            'google'  => [
+                'url'   => '#',
+                'icon'  => 'fa fa-google',
             ],
         ];
     }
 
+<<<<<<< HEAD
     public function police()
     {
         return true;
     }
 }
+=======
+}
+>>>>>>> parent of 2004808... CS Fixer
