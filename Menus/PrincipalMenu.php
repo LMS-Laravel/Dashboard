@@ -64,12 +64,8 @@ class PrincipalMenu extends BaseMenu
         ];
     }
 
-<<<<<<< HEAD
     public function police()
     {
         return true;
     }
 }
-=======
-}
->>>>>>> parent of 2004808... CS Fixer

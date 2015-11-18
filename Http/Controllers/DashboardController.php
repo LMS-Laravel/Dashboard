@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <?php
 
 namespace Modules\Dashboard\Http\Controllers;
-=======
-<?php namespace Modules\Dashboard\Http\Controllers;
->>>>>>> parent of 2004808... CS Fixer
 
 use Modules\Course\Repositories\CourseRepository;
 use Modules\Dashboard\Repositories\DashboardRepository;
