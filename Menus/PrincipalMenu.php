@@ -8,7 +8,8 @@ class PrincipalMenu extends BaseMenu
 {
     public function __construct()
     {
-        $this->class = 'nav navbar-nav navbar-right nav-effect uppercase';
+        $this->class    = 'nav navbar-nav navbar-right nav-effect uppercase';
+        $this->name     = 'principal.menu';
     }
 
     /**
@@ -62,5 +63,10 @@ class PrincipalMenu extends BaseMenu
                 'icon' => 'fa fa-google',
             ],
         ];
+    }
+
+    public function police()
+    {
+        return true;
     }
 }

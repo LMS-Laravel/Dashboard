@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\Dashboard\Http\Controllers;
+namespace Modules\Dashboard\Http\Controllers;
 
 use Modules\Course\Repositories\CourseRepository;
 use Modules\Dashboard\Repositories\DashboardRepository;
